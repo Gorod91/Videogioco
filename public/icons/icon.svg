@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d8fe0"/><stop offset="1" stop-color="#9fdcff"/></linearGradient>
+    <radialGradient id="fur" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#ffb36a"/><stop offset="1" stop-color="#f06d10"/></radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <rect y="380" width="512" height="132" fill="#6fd14a"/><rect y="380" width="512" height="18" fill="#4fb03a"/>
+  <polygon points="150,150 175,60 225,135" fill="#f06d10"/><polygon points="362,150 337,60 287,135" fill="#f06d10"/>
+  <polygon points="165,95 175,60 190,90" fill="#2b1a12"/><polygon points="347,95 337,60 322,90" fill="#2b1a12"/>
+  <ellipse cx="256" cy="255" rx="140" ry="145" fill="url(#fur)"/>
+  <ellipse cx="256" cy="300" rx="90" ry="85" fill="#fff0d8"/>
+  <ellipse cx="208" cy="225" rx="34" ry="44" fill="#fff"/><ellipse cx="304" cy="225" rx="34" ry="44" fill="#fff"/>
+  <ellipse cx="214" cy="232" rx="16" ry="24" fill="#2b1a12"/><ellipse cx="298" cy="232" rx="16" ry="24" fill="#2b1a12"/>
+  <ellipse cx="256" cy="275" rx="14" ry="10" fill="#2b1a12"/>
+  <path d="M130 350 Q256 400 382 350 L382 372 Q256 422 130 372Z" fill="#2f7bff"/>
+  <ellipse cx="190" cy="405" rx="44" ry="22" fill="#e8364a"/><ellipse cx="322" cy="405" rx="44" ry="22" fill="#e8364a"/>
+</svg>

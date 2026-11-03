@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <!-- Niente zoom: scala fissa, nessun pinch (iOS lo ignora in parte: vedi anche gesturestart in game.js) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Saltello</title>
+  <!-- Versione pubblicata: la scrive GitHub Actions (vedi pages.yml), insieme a version.json -->
+  <meta name="app-version" content="dev">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Saltello">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (navigator.standalone || matchMedia('(display-mode: standalone)').matches) document.documentElement.classList.add('standalone');
+  </script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- HUD in alto -->
+  <div id="hud">
+    <div class="pill" id="gems"><span class="gem-ico"></span><b id="gem-count">0</b><small id="gem-total">/0</small></div>
+    <div class="pill" id="clock">0:00</div>
+    <button class="round" id="btn-restart" aria-label="Ricomincia">
+      <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- Comandi: joystick a sinistra, tasti a destra -->
+  <div id="stick-zone"></div>
+  <div id="stick"><div id="stick-ring"></div><div id="stick-knob"></div></div>
+
+  <button class="skill" id="btn-dash" aria-label="Scatto">
+    <svg viewBox="0 0 24 24"><path d="M4 6l6 6-6 6M12 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="cd"><span></span></div>
+  </button>
+  <button class="skill big" id="btn-jump" aria-label="Salto">
+    <svg viewBox="0 0 24 24"><path d="M6 13l6-6 6 6M6 19l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- Messaggi -->
+  <div id="banner" hidden></div>
+  <div id="overlay" hidden>
+    <div class="card">
+      <h1 id="ov-title">Saltello</h1>
+      <p id="ov-text"></p>
+      <button id="ov-btn">Gioca</button>
+      <p class="hint" id="ov-hint"></p>
+    </div>
+  </div>
+
+  <script src="vendor/three-r128.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
